@@ -29,9 +29,9 @@ diff --git a/libdevcore/CMakeLists.txt b/libdevcore/CMakeLists.txt
 index fa7e3f48..1f9f52b4 100644
 --- a/libdevcore/CMakeLists.txt
 +++ b/libdevcore/CMakeLists.txt
-@@ -6,0 +6,0 @@ target_link_libraries(devcore PRIVATE jsoncpp ${Boost_FILESYSTEM_LIBRARIES} ${Bo
-target_include_directories(devcore PUBLIC "${CMAKE_SOURCE_DIR}")
-add_dependencies(devcore solidity_BuildInfo.h)
+@@ -6,2 +6,3 @@ target_link_libraries(devcore PRIVATE jsoncpp ${Boost_FILESYSTEM_LIBRARIES} ${Bo
+ target_include_directories(devcore PUBLIC "${CMAKE_SOURCE_DIR}")
+ add_dependencies(devcore solidity_BuildInfo.h)
 +install(TARGETS devcore LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
 diff --git a/libevmasm/CMakeLists.txt b/libevmasm/CMakeLists.txt
 index 86192c1b..e7f15e93 100644
