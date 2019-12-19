@@ -30,7 +30,7 @@ index fa7e3f48..1f9f52b4 100644
 --- a/libdevcore/CMakeLists.txt
 +++ b/libdevcore/CMakeLists.txt
 @@ -6,3 +6,4 @@ target_link_libraries(devcore PRIVATE jsoncpp ${Boost_FILESYSTEM_LIBRARIES} ${Bo
- target_include_directories(devcore PUBLIC "${CMAKE_SOURCE_DIR}")
+ target_link_libraries(devcore PUBLIC jsoncpp Boost::boost Boost::filesystem Boost::regex Boost::system)target_include_directories(devcore PUBLIC "${CMAKE_SOURCE_DIR}")
  target_include_directories(devcore SYSTEM PUBLIC ${Boost_INCLUDE_DIRS})
  add_dependencies(devcore solidity_BuildInfo.h)
 +install(TARGETS devcore LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
